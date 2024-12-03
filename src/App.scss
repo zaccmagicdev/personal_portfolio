@@ -1,1 +1,46 @@
-$testColor: rgb(6, 79, 92)
+* {
+  padding: 0;
+  border: 0;
+}
+
+html {
+  height: 200%;
+}
+
+body {
+  background: rgb(15, 0, 77);
+  background: radial-gradient(circle, rgb(8, 0, 41) 0%, rgb(9, 0, 15) 100%);
+  background-attachment: fixed;
+}
+
+.starfield{
+
+}
+
+.star {
+  background: transparent url(../src/vendor/icons/star-regular.svg) center
+    no-repeat;
+  position: relative;
+  height: 5px;
+  width: 5px;
+}
+
+@for $i from 1 through 100 {
+  .star:nth-of-type(#{$i}) {
+    top: random(101) - 1 + vh;
+    left: random(101) - 1 + vw;
+    width: random(2) + px;
+    height: random(2) + px;
+    opacity: random(50) / 100 + 0.5;
+    animation: moveStar infinite;
+  }
+}
+
+@keyframes moveStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000);
+  }
+}
