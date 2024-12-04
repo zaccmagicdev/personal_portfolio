@@ -28,12 +28,18 @@ body {
   background-attachment: fixed;
 }
 
+.App{
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
 .stars{
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: $shadows-small;
-  animation			: animStar 50s linear infinite;
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3);
     
   &:after{
     content: " ";
@@ -51,7 +57,8 @@ body {
   height: 2px;
   background: transparent;
   box-shadow: $shadows-medium;
-  animation			: animStar 100s linear infinite;
+  -webkit-transform: translateZ(-6px) scale(5);
+  transform: translateZ(-6px) scale(5);
     
   &:after{
     content: " ";
@@ -69,7 +76,8 @@ body {
   height: 3px;
   background: transparent;
   box-shadow: $shadows-big;
-  animation			: animStar 150s linear infinite;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
     
   &:after{
     content: " ";
