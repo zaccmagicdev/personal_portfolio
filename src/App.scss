@@ -1,50 +1,44 @@
 $screenWidth: 7000;
 
-@function renderStars($amount){
-  $returnVal: '#{random($screenWidth)}px #{random($screenWidth)}px #3A68E8';
-  @for $i from 2 through $amount{
-    $returnVal: '#{$returnVal} , #{random($screenWidth)}px #{random($screenWidth)}px #40A4FF';
+@function renderStars($amount, $color) {
+  $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px" + $color;
+  @for $i from 2 through $amount {
+    $returnVal: "#{$returnVal} , #{random($screenWidth)}px #{random($screenWidth)}px" + $color;
   }
 
-  @return unquote($string: $returnVal)
+  @return unquote($string: $returnVal);
 }
 
-$shadows-small: renderStars(700);
-$shadows-medium: renderStars(400);
-$shadows-big: renderStars(300);
+$shadows-small: renderStars(700, '#FF4DFF');
+$shadows-medium: renderStars(400,'#A64DFF');
+$shadows-big: renderStars(300,'#3A68E8');
 
 * {
   padding: 0;
-  border: 0;
-}
-
-html {
-  height: 200%;
+  margin: 0;
 }
 
 body {
   background: rgb(15, 0, 77);
-  background: radial-gradient(circle, rgb(7, 0, 34) 0%, rgb(19, 0, 32) 100%);
+  background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background-attachment: fixed;
+  height: auto;
 }
 
-.App{
+.App {
   -webkit-perspective: 1px;
   perspective: 1px;
   max-width: 1000px;
 }
 
-.stars1{
+.stars1 {
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: $shadows-small;
-  animation: starMove 150s linear infinite;
-  -webkit-transform: translateZ(-2px) scale(3);
-  transform: translateZ(-2px) scale(3);
-  
-    
-  &:after{
+  animation: starMove 110s linear infinite;
+
+  &:after {
     content: " ";
     position: absolute;
     top: 2000px;
@@ -54,17 +48,15 @@ body {
     box-shadow: $shadows-small;
   }
 }
-    
-.stars2{
+
+.stars2 {
   width: 2px;
   height: 2px;
   background: transparent;
   box-shadow: $shadows-medium;
-  animation: starMove 200s linear infinite;
-  -webkit-transform: translateZ(-6px) scale(5);
-  transform: translateZ(-6px) scale(5);
+  animation: starMove 160s linear infinite;
 
-  &:after{
+  &:after {
     content: " ";
     position: absolute;
     top: 2000px;
@@ -74,17 +66,15 @@ body {
     box-shadow: $shadows-medium;
   }
 }
-    
-.stars3{
+
+.stars3 {
   width: 3px;
   height: 3px;
   background: transparent;
   box-shadow: $shadows-big;
-  animation: starMove 250s linear infinite;
-  -webkit-transform: translateZ(-12px) scale(6);
-  transform: translateZ(-12px) scale(6);
-    
-  &:after{
+  animation: starMove 210s linear infinite;
+
+  &:after {
     content: " ";
     position: absolute;
     top: 2000px;
@@ -95,11 +85,11 @@ body {
   }
 }
 
-@keyframes starMove{
-  from{
-    transform: translateY(-2000px)
+@keyframes starMove {
+  from {
+    transform: translateY(-2000px);
   }
-  to{		
-    transform: translateY(0px)
+  to {
+    transform: translateY(0px);
   }
 }
