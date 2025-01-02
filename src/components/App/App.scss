@@ -1,5 +1,10 @@
 $screenWidth: 7000;
 
+@font-face {
+  font-family: "Afacad Flux";
+  src: url('../../../public/fonts/AfacadFlux-Regular.woff') format(woff);
+}
+
 @function renderStars($amount, $color) {
   $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px" + $color;
   @for $i from 2 through $amount {
@@ -16,19 +21,22 @@ $shadows-big: renderStars(300,'#3A68E8');
 * {
   padding: 0;
   margin: 0;
+  height: 0;
 }
 
 body {
   background: rgb(15, 0, 77);
   background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background-attachment: fixed;
-  height: auto;
+  font-family: 'Afacad Flux', Arial, Helvetica;
+  color: white
 }
 
 .App {
   -webkit-perspective: 1px;
   perspective: 1px;
   max-width: 1000px;
+  padding: 15px;
 }
 
 .stars1 {
