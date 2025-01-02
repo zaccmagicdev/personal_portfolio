@@ -21,7 +21,6 @@ $shadows-big: renderStars(300,'#3A68E8');
 * {
   padding: 0;
   margin: 0;
-  height: 0;
 }
 
 body {
@@ -29,7 +28,8 @@ body {
   background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background-attachment: fixed;
   font-family: 'Afacad Flux', Arial, Helvetica;
-  color: white
+  color: white;
+  height: auto;
 }
 
 .App {
@@ -37,6 +37,14 @@ body {
   perspective: 1px;
   max-width: 1000px;
   padding: 15px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.stars{
+  position: absolute;
+  z-index: 2;
 }
 
 .stars1 {
@@ -91,6 +99,10 @@ body {
     background: transparent;
     box-shadow: $shadows-big;
   }
+}
+
+.app__main-text{
+  font-size: 9em;
 }
 
 @keyframes starMove {
