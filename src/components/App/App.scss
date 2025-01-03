@@ -29,7 +29,6 @@ body {
   background-attachment: fixed;
   font-family: 'Afacad Flux', Arial, Helvetica;
   color: white;
-  height: auto;
 }
 
 .App {
@@ -40,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 999;
+  height: 100vh;
 }
 
 .stars{
