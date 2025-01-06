@@ -23,6 +23,10 @@ $shadows-big: renderStars(300,'#3A68E8');
   margin: 0;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 body {
   background: rgb(15, 0, 77);
   background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
