@@ -1,7 +1,7 @@
 import "./App.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Parallax, Pagination } from 'swiper/modules';
+import { Parallax, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -23,15 +23,18 @@ function App() {
           '--swiper-pagination-bullet-inactive-opacity': '1',
           "--swiper-pagination-bullet-size": "12px",
         }}
-        speed={1200}
+        speed={1500}
         direction="vertical"
         parallax={true}
         pagination={{
           clickable: true,
         }}
         mousewheel={true}
+        keyboard={{
+          enabled: true,
+        }}
         navigation={true}
-        modules={[Parallax, Pagination ]}
+        modules={[Parallax, Pagination, Mousewheel, Keyboard]}
         className="appParallaxSlider"
         slidesPerView={1}
       >
