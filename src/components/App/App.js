@@ -1,6 +1,11 @@
 import "./App.scss";
 
 function App() {
+  const swiper = {
+    pagesPerSlide: 1,
+    mousewheel: true,
+  };
+
   return (
     <>
       <div className="stars stars1" />
@@ -8,7 +13,21 @@ function App() {
       <div className="stars stars3" />
 
       <div className="App">
-        <section className="app__section app__section-title">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+        {/*<section className="app__section app__section-title">
           <h1 className="app__main-text">
             My name is Zachary Wedel and I am a...
           </h1>
@@ -17,7 +36,7 @@ function App() {
           <h2>What am I capable of?</h2>
           <p>I am a self-driven, yet compassionate and willing full stack software developer with 2 years in this wonderful industry.
           </p>
-        </section>
+        </section>*/}
       </div>
     </>
   );
