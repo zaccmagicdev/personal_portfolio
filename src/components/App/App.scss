@@ -1,4 +1,4 @@
-$screenWidth: 7000;
+$screenWidth: 2000;
 
 @font-face {
   font-family: "Afacad Flux";
@@ -6,17 +6,17 @@ $screenWidth: 7000;
 }
 
 @function renderStars($amount, $color) {
-  $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px" + $color;
+  $returnVal: '#{random(2000)}px #{random(2000)}px #{$color}';
   @for $i from 2 through $amount {
-    $returnVal: "#{$returnVal} , #{random($screenWidth)}px #{random($screenWidth)}px" + $color;
+    $returnVal: '#{$returnVal} , #{random(2000)}px #{random(2000)}px #{$color}';
   }
 
-  @return unquote($string: $returnVal);
+  @return unquote($returnVal);
 }
 
 $shadows-small: renderStars(700, '#FF4DFF');
-$shadows-medium: renderStars(400,'#A64DFF');
-$shadows-big: renderStars(300,'#3A68E8');
+$shadows-medium: renderStars(200,'#A64DFF');
+$shadows-big: renderStars(100,'#3A68E8');
 
 * {
   padding: 0;
@@ -25,6 +25,10 @@ $shadows-big: renderStars(300,'#3A68E8');
 
 button:hover{
   cursor: pointer;
+}
+
+html{
+  height: 100%;
 }
 
 body {
@@ -54,14 +58,15 @@ body {
 .stars{
   z-index: 2;
   border: 1px solid red;
+  background: transparent;
 }
 
 .stars1 {
   width: 1px;
   height: 1px;
-  background: transparent;
+
   box-shadow: $shadows-small;
-  animation: starMove 105s linear infinite;
+  animation: starMove 5s linear infinite;
 
   &:after {
     content: " ";
@@ -69,7 +74,7 @@ body {
     top: 2000px;
     width: 1px;
     height: 1px;
-    background: transparent;
+   
     box-shadow: $shadows-small;
   }
 }
@@ -77,9 +82,9 @@ body {
 .stars2 {
   width: 2px;
   height: 2px;
-  background: transparent;
+
   box-shadow: $shadows-medium;
-  animation: starMove 155s linear infinite;
+  animation: starMove 5s linear infinite;
 
   &:after {
     content: " ";
@@ -87,7 +92,7 @@ body {
     top: 2000px;
     width: 2px;
     height: 2px;
-    background: transparent;
+    
     box-shadow: $shadows-medium;
   }
 }
@@ -95,9 +100,9 @@ body {
 .stars3 {
   width: 3px;
   height: 3px;
-  background: transparent;
+ 
   box-shadow: $shadows-big;
-  animation: starMove 250s  linear infinite;
+  animation: starMove 5s  linear infinite;
 
   &:after {
     content: " ";
@@ -105,7 +110,7 @@ body {
     top: 2000px;
     width: 3px;
     height: 3px;
-    background: transparent;
+  
     box-shadow: $shadows-big;
   }
 }
