@@ -66,9 +66,8 @@ body {
 .stars1 {
   width: 1.5px;
   height: 1.5px;
-
   box-shadow: $shadows-small;
-  animation: starMove 105s linear infinite;
+  animation: starMove 100s linear infinite;
 
   &:after {
     content: " ";
@@ -84,9 +83,8 @@ body {
 .stars2 {
   width: 2px;
   height: 2px;
-
   box-shadow: $shadows-medium;
-  animation: starMove 175s linear infinite;
+  animation: starMove 150s linear infinite;
 
   &:after {
     content: " ";
@@ -102,9 +100,8 @@ body {
 .stars3 {
   width: 3px;
   height: 3px;
-
   box-shadow: $shadows-big;
-  animation: starMove 250s linear infinite;
+  animation: starMove 200s linear infinite;
 
   &:after {
     content: " ";
@@ -120,9 +117,8 @@ body {
 .stars4 {
   width: 1px;
   height: 1px;
-
   box-shadow: $shadows-tiny;
-  animation: starMove 95s linear infinite;
+  animation: starMove 50s linear infinite;
 
   &:after {
     content: " ";
@@ -146,25 +142,24 @@ body {
   font-size: 13em;
   text-align: center;
   text-wrap: nowrap;
-
   animation: floatAround linear infinite 25s;
 }
 
-.name{
+.name {
   animation: floatAround linear infinite 45s;
 }
 
-.occupation{
+.occupation {
   animation: floatAround linear infinite 35s;
 }
 
 @keyframes starMove {
   from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
 }
 
 @keyframes floatAround {
