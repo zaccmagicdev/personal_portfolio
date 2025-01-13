@@ -12,6 +12,7 @@ function App() {
       <div className="stars stars1" />
       <div className="stars stars2" />
       <div className="stars stars3" />
+      <div className="stars stars4" />
 
       <div className="App">
         <>
@@ -45,24 +46,15 @@ function App() {
             ></div>
             <SwiperSlide>
               {/*Title Page*/}
-              <div className="title app__main-text" data-swiper-parallax="-300">
-                My name is Zachary Wedel and I am a...
-              </div>
-              <div className="subtitle" data-swiper-parallax="-200">
-                Subtitle
-              </div>
-              <div className="text" data-swiper-parallax="-100">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
-                  nec. Nulla laoreet justo vitae porttitor porttitor.
-                  Suspendisse in sem justo. Integer laoreet magna nec elit
-                  suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at
-                  elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula
-                  nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean
-                  feugiat non eros quis feugiat.
-                </p>
-              </div>
+              <h1 className="title app__main-text" data-swiper-parallax="-300">
+                My name is
+              </h1>
+              <h1 className="title app__main-text name" data-swiper-parallax="-200">
+                Zachary Wedel
+              </h1>
+              <h1 className="title app__main-text occupation" data-swiper-parallax="-100">
+                and I am a...
+              </h1>
             </SwiperSlide>
             <SwiperSlide>
               {/*About me section*/}
