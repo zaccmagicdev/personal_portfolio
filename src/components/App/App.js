@@ -1,4 +1,5 @@
 import "./App.scss";
+import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";

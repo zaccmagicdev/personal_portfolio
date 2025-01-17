@@ -19,6 +19,10 @@ $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(200, "#A64DFF");
 $shadows-big: renderStars(100, "#3A68E8");
 
+.swiper-vertical{
+  animation: floatAround 45s linear infinite;
+}
+
 * {
   padding: 0;
   margin: 0;
