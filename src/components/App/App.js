@@ -14,7 +14,6 @@ function App() {
       <div className="stars stars2" />
       <div className="stars stars3" />
       <div className="stars stars4" />
-
       <div className="App">
         <>
           <Swiper
@@ -47,14 +46,29 @@ function App() {
             ></div>
             <SwiperSlide>
               {/*Title Page*/}
-              <h1 className="title app__main-text" data-swiper-parallax="-300">
+              <h1
+                className="title app__main-text top"
+                data-swiper-parallax="-300"
+              >
                 My name is
               </h1>
-              <h1 className="title app__main-text name" data-swiper-parallax="-200">
+              <h1
+                className="title app__main-text name"
+                data-swiper-parallax="-200"
+              >
                 Zachary Wedel
               </h1>
-              <h1 className="title app__main-text occupation" data-swiper-parallax="-100">
-                and I am a...
+              <h1
+                className="title app__main-text occupation1"
+                data-swiper-parallax="-100"
+              >
+                and I am a
+              </h1>
+              <h1
+                className="title app__main-text occupation2"
+                data-swiper-parallax="-50"
+              >
+                Fullstack Developer
               </h1>
             </SwiperSlide>
             <SwiperSlide>
