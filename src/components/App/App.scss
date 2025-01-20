@@ -19,7 +19,7 @@ $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(200, "#A64DFF");
 $shadows-big: renderStars(100, "#3A68E8");
 
-.swiper-vertical{
+.swiper-vertical {
   animation: floatAround 45s linear infinite;
 }
 
@@ -147,22 +147,19 @@ body {
   text-wrap: nowrap;
 }
 
-.top{
-  animation: 
-    floatAround linear infinite 65s,
-    fadeIn 2s ease-in 1s
+.top {
+  animation: floatAround linear infinite 65s, fade 2s ease-in;
 }
 
 .name {
-  animation: floatAround linear infinite 45s,
-    fadeIn 3s ease-in;
+  animation: floatAround linear infinite 45s, fade 3s ease-in;
 }
 
 .occupation1 {
   animation: floatAround linear infinite 35s;
 }
 
-.occupation2{
+.occupation2 {
   animation: floatAround linear infinite 25s;
 }
 
@@ -190,5 +187,13 @@ body {
   }
   100% {
     transform: translateX(0px) translateY(0px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
