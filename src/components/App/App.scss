@@ -6,9 +6,9 @@ $screenWidth: 5120;
 }
 
 @function renderStars($amount, $color) {
-  $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
+  $returnVal: "#{random(5120)}px #{random(5120)}px #{$color}";
   @for $i from 2 through $amount {
-    $returnVal: "#{$returnVal} , #{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
+    $returnVal: "#{$returnVal} , #{random(5120)}px #{random(5120)}px #{$color}";
   }
 
   @return unquote($returnVal);
@@ -61,7 +61,6 @@ body {
 
 .stars {
   z-index: 2;
-  border: 1px solid red;
   background: transparent;
   position: absolute;
 }
@@ -70,15 +69,14 @@ body {
   width: 1.5px;
   height: 1.5px;
   box-shadow: $shadows-small;
-  animation: starMove 100s linear infinite;
+  animation: starMove 10s linear infinite;
 
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 5120px;
     width: 1px;
     height: 1px;
-
     box-shadow: $shadows-small;
   }
 }
@@ -87,12 +85,12 @@ body {
   width: 2px;
   height: 2px;
   box-shadow: $shadows-medium;
-  animation: starMove 150s linear infinite;
+  animation: starMove 15s linear infinite;
 
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: $screenWidth;
     width: 2px;
     height: 2px;
 
@@ -104,15 +102,14 @@ body {
   width: 3px;
   height: 3px;
   box-shadow: $shadows-big;
-  animation: starMove 200s linear infinite;
+  animation: starMove 20s linear infinite;
 
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: $screenWidth;
     width: 3px;
     height: 3px;
-
     box-shadow: $shadows-big;
   }
 }
@@ -121,15 +118,14 @@ body {
   width: 1px;
   height: 1px;
   box-shadow: $shadows-tiny;
-  animation: starMove 50s linear infinite;
+  animation: starMove 5s linear infinite;
 
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: $screenWidth;
     width: 3px;
     height: 3px;
-
     box-shadow: $shadows-tiny;
   }
 }
