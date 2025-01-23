@@ -16,8 +16,8 @@ $screenWidth: 5120;
 
 $shadows-tiny: renderStars(100, "#00FFCC");
 $shadows-small: renderStars(700, "#FF4DFF");
-$shadows-medium: renderStars(200, "#A64DFF");
-$shadows-big: renderStars(100, "#3A68E8");
+$shadows-medium: renderStars(400, "#A64DFF");
+$shadows-big: renderStars(200, "#3A68E8");
 
 .swiper-vertical {
   animation: floatAround 45s linear infinite;
@@ -138,25 +138,26 @@ body {
 }
 
 .app__main-text {
-  font-size: 13em;
+  font-size: 8em;
   text-align: center;
   text-wrap: nowrap;
+  animation-fill-mode: forwards;
 }
 
 .top {
-  animation: floatAround linear infinite 65s, fade 2s ease-in;
+  animation: floatAround linear infinite 65s, 1s ease 3s normal forwards 2 fade;
 }
 
 .name {
-  animation: floatAround linear infinite 45s, fade 3s ease-in;
+  animation: floatAround linear infinite 45s, //3s ease 0s normal forwards 4 fade;
 }
 
 .occupation1 {
-  animation: floatAround linear infinite 35s;
+  animation: floatAround linear infinite 35s, //9s ease 0s normal forwards 2 fade;
 }
 
 .occupation2 {
-  animation: floatAround linear infinite 25s;
+  animation: floatAround linear infinite 25s, //3s ease 0s normal forwards 5 fade
 }
 
 @keyframes starMove {
@@ -186,10 +187,7 @@ body {
   }
 }
 @keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
 }
