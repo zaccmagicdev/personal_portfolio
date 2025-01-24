@@ -20,7 +20,7 @@ function App() {
     }, miliseconds);
   }
 
-  fadeInTiming(3, topRef);
+  fadeInTiming(2, topRef);
 
   return (
     <>
