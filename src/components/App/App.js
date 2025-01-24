@@ -7,6 +7,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function App() {
+
+  function fadeInTiming(delay, element){
+    const miliseconds = delay * 1000;
+    setTimeout(() => {console.log('test')}, miliseconds)
+  }
+
+  fadeInTiming(3, 'poop');
+
   return (
     <>
       <div className="stars stars1" />
