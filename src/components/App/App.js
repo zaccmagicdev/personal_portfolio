@@ -1,19 +1,26 @@
 import "./App.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
+import { useRef } from "react";
 
 function App() {
 
-  function fadeInTiming(delay, element){
+//this is all here because I couldn't make a smooth animation with just CSS :>
+  const topRef = useRef(null);
+  const nameRef = useRef(null);
+  const firstOccRef = useRef(null);
+  const secondOccRef = useRef(null);
+
+  function fadeInTiming(delay, element) {
     const miliseconds = delay * 1000;
-    setTimeout(() => {console.log('test')}, miliseconds)
+    setTimeout(() => {
+      element.current.classList.add("app__main-text_shown");
+    }, miliseconds);
   }
 
-  fadeInTiming(3, 'poop');
+  fadeInTiming(3, topRef);
 
   return (
     <>
@@ -54,25 +61,25 @@ function App() {
             <SwiperSlide>
               {/*Title Page*/}
               <h1
-                className="title app__main-text top"
+                className="title app__main-text top" ref={topRef}
                 data-swiper-parallax="-300"
               >
                 My name is
               </h1>
               <h1
-                className="title app__main-text name"
+                className="title app__main-text name" ref={nameRef}
                 data-swiper-parallax="-200"
               >
                 Zachary Wedel
               </h1>
               <h1
-                className="title app__main-text occupation1"
+                className="title app__main-text occupation1" ref={firstOccRef}
                 data-swiper-parallax="-100"
               >
                 and I am a
               </h1>
               <h1
-                className="title app__main-text occupation2"
+                className="title app__main-text occupation2" ref={secondOccRef}
                 data-swiper-parallax="-50"
               >
                 Fullstack Developer

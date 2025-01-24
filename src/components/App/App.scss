@@ -6,9 +6,9 @@ $screenWidth: 5120;
 }
 
 @function renderStars($amount, $color) {
-  $returnVal: "#{random(5120)}px #{random(5120)}px #{$color}";
+  $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
   @for $i from 2 through $amount {
-    $returnVal: "#{$returnVal} , #{random(5120)}px #{random(5120)}px #{$color}";
+    $returnVal: "#{$returnVal} , #{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
   }
 
   @return unquote($returnVal);
@@ -150,9 +150,9 @@ body {
 }
 
 .top {
-  animation: floatAround linear infinite 65s, 1s ease 3s normal forwards 2 fade;
+  animation: floatAround linear infinite 65s, 1s ease 6s normal 1 fade;
 }
-
+/*
 .name {
   animation: floatAround linear infinite 45s, //3s ease 0s normal forwards 4 fade;
 }
@@ -164,7 +164,7 @@ body {
 .occupation2 {
   animation: floatAround linear infinite 25s, //3s ease 0s normal forwards 5 fade
 }
-
+*/
 @keyframes starMove {
   from {
     transform: translateY(0px);
