@@ -20,6 +20,7 @@ $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
 
 .swiper-vertical {
+  -webkit-animation: floatAround 45s linear infinite;
   animation: floatAround 45s linear infinite;
 }
 
@@ -38,10 +39,13 @@ html {
 
 body {
   background: rgb(15, 0, 77);
+  background: -o-radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background-attachment: fixed;
   font-family: "Afacad Flux", Arial, Helvetica;
   color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
 }
@@ -51,10 +55,17 @@ body {
   perspective: 1px;
   max-width: 1700px;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: auto;
 }
@@ -68,7 +79,9 @@ body {
 .stars1 {
   width: 1.5px;
   height: 1.5px;
+  -webkit-box-shadow: $shadows-small;
   box-shadow: $shadows-small;
+  -webkit-animation: starMove 10s linear infinite;
   animation: starMove 10s linear infinite;
 
   &:after {
@@ -77,6 +90,7 @@ body {
     top: 5120px;
     width: 1px;
     height: 1px;
+    -webkit-box-shadow: $shadows-small;
     box-shadow: $shadows-small;
   }
 }
@@ -84,7 +98,9 @@ body {
 .stars2 {
   width: 2px;
   height: 2px;
+  -webkit-box-shadow: $shadows-medium;
   box-shadow: $shadows-medium;
+  -webkit-animation: starMove 15s linear infinite;
   animation: starMove 15s linear infinite;
 
   &:after {
@@ -94,6 +110,8 @@ body {
     width: 2px;
     height: 2px;
 
+    -webkit-box-shadow: $shadows-medium;
+
     box-shadow: $shadows-medium;
   }
 }
@@ -101,7 +119,9 @@ body {
 .stars3 {
   width: 3px;
   height: 3px;
+  -webkit-box-shadow: $shadows-big;
   box-shadow: $shadows-big;
+  -webkit-animation: starMove 20s linear infinite;
   animation: starMove 20s linear infinite;
 
   &:after {
@@ -110,6 +130,7 @@ body {
     top: $screenWidth;
     width: 3px;
     height: 3px;
+    -webkit-box-shadow: $shadows-big;
     box-shadow: $shadows-big;
   }
 }
@@ -117,7 +138,9 @@ body {
 .stars4 {
   width: 1px;
   height: 1px;
+  -webkit-box-shadow: $shadows-tiny;
   box-shadow: $shadows-tiny;
+  -webkit-animation: starMove 5s linear infinite;
   animation: starMove 5s linear infinite;
 
   &:after {
@@ -126,6 +149,7 @@ body {
     top: $screenWidth;
     width: 3px;
     height: 3px;
+    -webkit-box-shadow: $shadows-tiny;
     box-shadow: $shadows-tiny;
   }
 }
@@ -141,61 +165,127 @@ body {
   font-size: 8em;
   text-align: center;
   text-wrap: nowrap;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
 
-.app__main-text_shown{
+.app__main-text_shown {
   visibility: visible;
 }
 
-
 .top {
+  -webkit-animation: floatAround linear infinite 65s,
+    1s ease 2s normal forwards 1 fade;
   animation: floatAround linear infinite 65s, 1s ease 2s normal forwards 1 fade;
 }
 
-
 .name {
+  -webkit-animation: floatAround linear infinite 45s,
+    1s ease 3s normal forwards 1 fade;
   animation: floatAround linear infinite 45s, 1s ease 3s normal forwards 1 fade;
 }
 
-
 .occupation1 {
+  -webkit-animation: floatAround linear infinite 35s,
+    1s ease 4s normal forwards 1 fade;
   animation: floatAround linear infinite 35s, 1s ease 4s normal forwards 1 fade;
 }
 
 .occupation2 {
+  -webkit-animation: floatAround linear infinite 25s,
+    1s ease 6s normal forwards 1 fade;
   animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
+}
+
+@-webkit-keyframes starMove {
+  from {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
 }
 
 @keyframes starMove {
   from {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
   to {
+    -webkit-transform: translateY(-2000px);
     transform: translateY(-2000px);
+  }
+}
+
+@-webkit-keyframes floatAround {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(15px) translateY(15px);
+    transform: translateX(15px) translateY(15px);
+  }
+  50% {
+    -webkit-transform: translateX(-15px) translateY(-15px);
+    transform: translateX(-15px) translateY(-15px);
+  }
+  75% {
+    -webkit-transform: translateX(15px) translateY(-15px);
+    transform: translateX(15px) translateY(-15px);
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px);
+    transform: translateX(0px) translateY(0px);
   }
 }
 
 @keyframes floatAround {
   0% {
+    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
   25% {
+    -webkit-transform: translateX(15px) translateY(15px);
     transform: translateX(15px) translateY(15px);
   }
   50% {
+    -webkit-transform: translateX(-15px) translateY(-15px);
     transform: translateX(-15px) translateY(-15px);
   }
   75% {
+    -webkit-transform: translateX(15px) translateY(-15px);
     transform: translateX(15px) translateY(-15px);
   }
   100% {
+    -webkit-transform: translateX(0px) translateY(0px);
     transform: translateX(0px) translateY(0px);
   }
 }
+
 @keyframes fade {
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

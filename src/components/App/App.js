@@ -16,7 +16,8 @@ function App() {
   function fadeInTiming(delay, element) {
     const miliseconds = delay * 1000;
     setTimeout(() => {
-      element.current.classList.add("app__main-text_shown");
+      console.log(element)
+      element !== null && element.current.classList.add("app__main-text_shown");
     }, miliseconds);
   }
 
