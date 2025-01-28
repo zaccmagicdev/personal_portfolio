@@ -154,19 +154,20 @@ body {
   animation: floatAround linear infinite 65s, 1s ease 2s normal forwards 1 fade;
 }
 
-/*
+
 .name {
-  animation: floatAround linear infinite 45s, 3s ease 0s normal forwards 1 fade;
+  animation: floatAround linear infinite 45s, 1s ease 3s normal forwards 1 fade;
 }
 
+
 .occupation1 {
-  animation: floatAround linear infinite 35s, 9s ease 0s normal forwards 2 fade;
+  animation: floatAround linear infinite 35s, 1s ease 4s normal forwards 1 fade;
 }
 
 .occupation2 {
-  animation: floatAround linear infinite 25s, 3s ease 0s normal forwards 5 fade
+  animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
 }
-*/
+
 @keyframes starMove {
   from {
     transform: translateY(0px);

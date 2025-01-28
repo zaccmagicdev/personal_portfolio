@@ -20,7 +20,14 @@ function App() {
     }, miliseconds);
   }
 
+  //respective js calls to animations in app.scss, I couldn't get it to look good in CSS :/
   fadeInTiming(2, topRef);
+  fadeInTiming(3, nameRef);
+  fadeInTiming(4, firstOccRef);
+  fadeInTiming(6, secondOccRef);
+
+//testing for re renders
+
 
   return (
     <>
