@@ -6,8 +6,7 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 
 function App() {
-
-//this is all here because I couldn't make a smooth animation with just CSS :>
+  //this is all here because I couldn't make a smooth animation with just CSS :>
   const topRef = useRef(null);
   const nameRef = useRef(null);
   const firstOccRef = useRef(null);
@@ -16,7 +15,7 @@ function App() {
   function fadeInTiming(delay, element) {
     const miliseconds = delay * 1000;
     setTimeout(() => {
-      console.log(element)
+      //prevents crash 
       element !== null && element.current.classList.add("app__main-text_shown");
     }, miliseconds);
   }
@@ -27,8 +26,7 @@ function App() {
   fadeInTiming(4, firstOccRef);
   fadeInTiming(6, secondOccRef);
 
-//testing for re renders
-
+  //testing for re renders
 
   return (
     <>
@@ -69,25 +67,29 @@ function App() {
             <SwiperSlide>
               {/*Title Page*/}
               <h1
-                className="title app__main-text top" ref={topRef}
+                className="title app__main-text top"
+                ref={topRef}
                 data-swiper-parallax="-300"
               >
                 My name is
               </h1>
               <h1
-                className="title app__main-text name" ref={nameRef}
+                className="title app__main-text name"
+                ref={nameRef}
                 data-swiper-parallax="-200"
               >
                 Zachary Wedel
               </h1>
               <h1
-                className="title app__main-text occupation1" ref={firstOccRef}
+                className="title app__main-text occupation1"
+                ref={firstOccRef}
                 data-swiper-parallax="-100"
               >
                 and I am a
               </h1>
               <h1
-                className="title app__main-text occupation2" ref={secondOccRef}
+                className="title app__main-text occupation2"
+                ref={secondOccRef}
                 data-swiper-parallax="-50"
               >
                 Fullstack Developer
