@@ -1,4 +1,5 @@
 $screenWidth: 5120;
+$largeFont: 8em;
 
 @font-face {
   font-family: "Afacad Flux";
@@ -22,6 +23,11 @@ $shadows-big: renderStars(200, "#3A68E8");
 .swiper-vertical {
   -webkit-animation: floatAround 45s linear infinite;
   animation: floatAround 45s linear infinite;
+}
+
+p, h1{
+  text-align: center;
+  text-wrap: nowrap;
 }
 
 * {
@@ -163,8 +169,8 @@ body {
 
 .app__main-text {
   font-size: 8em;
-  text-align: center;
-  text-wrap: nowrap;
+  //text-align: center;
+  //text-wrap: nowrap;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
@@ -172,6 +178,10 @@ body {
 
 .app__main-text_shown {
   visibility: visible;
+}
+
+.app__medium-text{
+  font-size: $largeFont / 2;
 }
 
 .top {
