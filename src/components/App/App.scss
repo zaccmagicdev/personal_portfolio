@@ -27,7 +27,7 @@ $shadows-big: renderStars(200, "#3A68E8");
 
 p, h1{
   text-align: center;
-  text-wrap: nowrap;
+ 
 }
 
 * {
@@ -169,8 +169,6 @@ body {
 
 .app__main-text {
   font-size: 8em;
-  //text-align: center;
-  //text-wrap: nowrap;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   visibility: hidden;
@@ -181,7 +179,7 @@ body {
 }
 
 .app__medium-text{
-  font-size: $largeFont / 2;
+  font-size: $largeFont / 3;
 }
 
 .top {
