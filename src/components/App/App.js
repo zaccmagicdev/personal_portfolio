@@ -16,6 +16,7 @@ function App() {
     const miliseconds = delay * 1000;
     setTimeout(() => {
       //prevents crash 
+      console.log(element.current.classList)
       element !== null && element.current.classList.add("app__main-text_shown");
     }, miliseconds);
   }
