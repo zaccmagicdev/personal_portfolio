@@ -20,11 +20,6 @@ $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
 
-.swiper-vertical {
-  -webkit-animation: floatAround 45s linear infinite;
-  animation: floatAround 45s linear infinite;
-}
-
 p, h1{
   text-align: center;
  
@@ -54,6 +49,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
+  text-rendering: auto;
 }
 
 .App {
@@ -158,6 +154,10 @@ body {
     -webkit-box-shadow: $shadows-tiny;
     box-shadow: $shadows-tiny;
   }
+}
+
+.appParallaxSlider{
+  position: inherit;
 }
 
 .app__section {
