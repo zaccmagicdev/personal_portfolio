@@ -22,7 +22,6 @@ $shadows-big: renderStars(200, "#3A68E8");
 
 p, h1{
   text-align: center;
- 
 }
 
 * {
@@ -205,6 +204,11 @@ body {
   -webkit-animation: floatAround linear infinite 25s,
     1s ease 6s normal forwards 1 fade;
   animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
+}
+
+.app__widgetsContainer{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 }
 
 @-webkit-keyframes starMove {
