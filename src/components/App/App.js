@@ -5,7 +5,9 @@ import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useRef } from "react";
+
 import FeaturedWidget from "../FeaturedWidget/FeaturedWidget";
+import { widgetData } from "../../constants/WidgetsData";
 
 function App() {
   //this is all here because I couldn't make a smooth animation with just CSS :>
@@ -31,12 +33,10 @@ function App() {
 
   return (
     <>
-    
-      
       <div className="stars stars2" />
       <div className="stars stars3" />
       <div className="stars stars4" />
-      
+
       <div className="App">
         <Swiper
           style={{
@@ -44,7 +44,7 @@ function App() {
             "--swiper-pagination-color": "#FF69B4",
             "--swiper-pagination-bullet-inactive-color": "#5DF15D",
             "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": "12px"
+            "--swiper-pagination-bullet-size": "12px",
           }}
           speed={1500}
           direction="vertical"
@@ -119,9 +119,18 @@ function App() {
               Subtitle
             </div>
             <div className="text" data-swiper-parallax="-100">
-              <section className="app__widgetsContainer" >
-             <FeaturedWidget name='proto'/>
-             </section>
+              <section className="app__widgetsContainer">
+                {widgetData.map((object) => {
+                  return (
+                  <FeaturedWidget
+                    id={object.id}
+                    name={object.name}
+                    githubLink={object.githublink}
+                    gifURL={object.gifURL}
+                    description={object.description}
+                  />)
+                })}
+              </section>
             </div>
           </SwiperSlide>
           {/*More coming soon!*/}
