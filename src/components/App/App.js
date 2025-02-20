@@ -28,14 +28,14 @@ function App() {
   fadeInTiming(4, firstOccRef);
   fadeInTiming(6, secondOccRef);
 
-  //trying useEffect to fix rendering issues on chrome
-
   return (
     <>
-      <div className="stars stars1" />
+    
+      
       <div className="stars stars2" />
       <div className="stars stars3" />
       <div className="stars stars4" />
+      
       <div className="App">
         <Swiper
           style={{

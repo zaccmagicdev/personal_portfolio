@@ -79,12 +79,13 @@ body {
 }
 
 .stars1 {
-  width: 1.5px;
-  height: 1.5px;
+  width: 1px;
+  height: 1px;
   -webkit-box-shadow: $shadows-small;
   box-shadow: $shadows-small;
   -webkit-animation: starMove 10s linear infinite;
   animation: starMove 10s linear infinite;
+  position: absolute;
 
   &:after {
     content: " ";
@@ -104,6 +105,7 @@ body {
   box-shadow: $shadows-medium;
   -webkit-animation: starMove 15s linear infinite;
   animation: starMove 15s linear infinite;
+  position: absolute;
 
   &:after {
     content: " ";
@@ -125,6 +127,7 @@ body {
   box-shadow: $shadows-big;
   -webkit-animation: starMove 20s linear infinite;
   animation: starMove 20s linear infinite;
+  position: absolute;
 
   &:after {
     content: " ";
@@ -144,6 +147,7 @@ body {
   box-shadow: $shadows-tiny;
   -webkit-animation: starMove 5s linear infinite;
   animation: starMove 5s linear infinite;
+  position: absolute;
 
   &:after {
     content: " ";
@@ -156,9 +160,6 @@ body {
   }
 }
 
-.appParallaxSlider{
-  position: inherit;
-}
 
 .app__section {
   width: 100%;
