@@ -38,6 +38,7 @@ function App() {
       <div className="stars stars4" />
 
       <div className="App">
+          
         <Swiper
           style={{
             "--swiper-navigation-color": "#FF69B4",

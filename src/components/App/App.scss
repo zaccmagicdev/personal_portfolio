@@ -6,6 +6,8 @@ $largeFont: 8em;
   src: url("../../../public/fonts/AfacadFlux-Regular.woff") format(woff);
 }
 
+
+
 @function renderStars($amount, $color) {
   $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
   @for $i from 2 through $amount {
