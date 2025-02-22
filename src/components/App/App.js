@@ -112,11 +112,8 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             {/*Featured works*/}
-            <div className="title" data-swiper-parallax="-300">
-              Slide 3
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
+            <div className="title app__medium-text" data-swiper-parallax="-300">
+              What kinds of things have I made?
             </div>
             <div className="text" data-swiper-parallax="-100">
               <section className="app__widgetsContainer">
