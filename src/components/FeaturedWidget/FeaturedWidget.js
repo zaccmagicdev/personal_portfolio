@@ -15,7 +15,7 @@ function FeaturedWidget(props) {
         href={props.githubLink}
         className="featuredWidget__githublink"
       >
-        {props.githubLink}
+        Click here to see on Github!
       </a>
       <p className="featuredWidget__description">{props.description}</p>
     </div>

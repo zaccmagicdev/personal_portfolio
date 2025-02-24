@@ -28,16 +28,10 @@
 
 .featuredWidget__githublink{
   display: block;
-  width: 300px;
+  width: inherit;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@keyframes marquee{
-  from{
-    transform: translateX(100%);
-  } to {
-    transform: translateX(-100%)
-  }
+  animation: marquee infinite;
+  color: aqua;
 }
