@@ -7,8 +7,8 @@ function FeaturedWidget(props) {
       className={`featuredWidget featuredWidget__${props.name}`}
       id={props.Id}
     >
-      <h2 className="featuredWidget__title">{props.name}</h2>
       <img className="featuredWidget__preview" src={props.gifURL} />
+      <h2 className="featuredWidget__title">{props.name}</h2>
       <a
         rel="noopener noreferrer"
         target="_blank"

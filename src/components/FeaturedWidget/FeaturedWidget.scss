@@ -1,11 +1,11 @@
-
-
 .featuredWidget {
   box-sizing: border-box;
   max-width: 300px;
   max-height: 400px;
-
-  /* From https://css.glass */
+  display: block;
+  margin: 0px;
+  padding: 0px;
+ 
   background: rgba(0, 255, 252, 0.14);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -19,9 +19,19 @@
   height: calc(100% / 2);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
+.featuredWidget__title{
+  box-sizing: border-box;
+}
+
+.featuredWidget__githublink{
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @keyframes marquee{
   from{
