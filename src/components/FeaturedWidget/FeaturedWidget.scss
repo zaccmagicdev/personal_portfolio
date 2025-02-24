@@ -1,22 +1,32 @@
-$containerWidth: 210px;
+
 
 .featuredWidget {
   box-sizing: border-box;
-  width: 300px;
+  max-width: 300px;
   max-height: 400px;
 
- /* From https://css.glass */
-background: rgba(0, 255, 252, 0.14);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(2.1px);
--webkit-backdrop-filter: blur(2.1px);
-border: 1px solid rgba(0, 255, 252, 1);
+  /* From https://css.glass */
+  background: rgba(0, 255, 252, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(0, 255, 252, 1);
 }
 
-.featuredWidget__preview{
-    width: 100%;
-    height: calc(100% / 2);
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+.featuredWidget__preview {
+  width: 100%;
+  height: calc(100% / 2);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-sizing: inherit;
+}
+
+
+@keyframes marquee{
+  from{
+    transform: translateX(100%);
+  } to {
+    transform: translateX(-100%)
+  }
 }

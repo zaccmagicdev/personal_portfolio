@@ -22,7 +22,7 @@ $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
 
-p, h1, div{
+p, h1, div, h2{
   text-align: center;
 }
 
@@ -211,7 +211,7 @@ body {
 .app__widgetsContainer{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  max-width: 968px;
+  max-width: calc(968px - 10%);
   gap: 15px;
 }
 
