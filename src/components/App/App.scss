@@ -210,8 +210,8 @@ body {
 
 .app__widgetsContainer{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  max-width: calc(968px - 10%);
+  grid-template-columns: repeat(auto-fit, 280px);
+  max-width: 968px;
   gap: 15px;
 }
 
