@@ -1,6 +1,7 @@
 import threejsgif from '../vendor/Images/threedeedemo.gif'
 import calcgif from '../vendor/Images/demonstration_calc_gif.gif'
-import weathergif from '../vendor/Images/weather_app_demonstration.gif'
+import weathergif from '../vendor/Images/weather_app_demonstration..gif'
+import mssgingAppgif from '../vendor/Images/mssging_app_demonstration.gif'
 
 export const widgetData = [
     {
@@ -24,7 +25,7 @@ export const widgetData = [
         name: 'Messaging App',
         id_name: 'mssgingapp',
         githublink: 'https://github.com/zaccmagicdev/mssgingappidea',
-        gifURL: 'https://media.tenor.com/JVn1Ve5xIbwAAAAM/ready-set.gif',
+        gifURL: mssgingAppgif,
         description: 'This is very much a prototype and only has login for now but my very first project with Googles Firebase'
     },
     {

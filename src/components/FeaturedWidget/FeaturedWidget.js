@@ -5,17 +5,27 @@ function FeaturedWidget(props) {
   const [coords, setCoords] = React.useState({ x: 0, y: 0 });
 
   React.useEffect(() => {
+
+    const widgetContainers = document.querySelectorAll(".featuredWidget")
+
     const handleWindowMouseMove = (event) => {
       setCoords({
         x: event.clientX,
         y: event.clientY,
       });
+
+      const blueEffect = document.createElement('span');
+      blueEffect.classList.add('hover_effect');
+
+      blueEffect.style.left = coords.x + "px";
+      blueEffect.style.top = coords.y + "px";
+
+      widgetContainers.forEach(x => x.appendChild(blueEffect))
     };
     
-    const widgetContainer = document.querySelector(".featuredWidget")
-    widgetContainer.addEventListener('mousemove', handleWindowMouseMove)
+    widgetContainers.forEach(x => x.addEventListener('mousemove', handleWindowMouseMove))
 
-    console.log(coords)
+    console.log(coords.x)
   });
 
   return (

@@ -213,6 +213,7 @@ body {
   grid-template-columns: repeat(auto-fit, 280px);
   max-width: 968px;
   gap: 15px;
+  overflow-y: scroll;
 }
 
 @-webkit-keyframes starMove {
