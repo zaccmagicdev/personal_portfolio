@@ -38,6 +38,7 @@ function App() {
       <div className="stars stars4" />
 
       <div className="App">
+      <button className="app__github-asteroid"  type="button" onclick="location.href='https://github.com/zaccmagicdev/personal_portfolio';"/>
           
         <Swiper
           style={{
