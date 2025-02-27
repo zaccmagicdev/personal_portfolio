@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./App.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -44,14 +43,15 @@ function App() {
       <div className="stars stars4" />
 
       <div className="App">
-        <>
-          <a href="https://github.com/zaccmagicdev/personal_portfolio" target="_blank" rel="noopener noreferrer">
-            <button
-              className="app__github-asteroid"
-              type="button"
-            ></button>
+        <div>
+          <a
+            href="https://github.com/zaccmagicdev/personal_portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="app__github-asteroid" type="button"></button>
           </a>
-        </>
+        </div>
 
         <Swiper
           style={{
@@ -123,14 +123,29 @@ function App() {
             <p className="app__medium-text" data-swiper-parallax="-200">
               and what can I do?
             </p>
-            <p className="text" data-swiper-parallax="-100">
-              My name is Zachary Wedel and I am a 23 year old full stack developer who completed the Software Engieering program at TripleTen and currently a
-              student at the College of Lake County. I've been invested in technology for a long time but made the switch to programming full time from 
-              learning cybersecurity. I am currently pursuing my Bachelor's Degree in Computer Science and have been happier than ever with my career choice.
-              Writing, building and being proud of the software I make has been a much more fulfilling experience than showing up at my college everyday and not
-              feeling invested. I'm mostly a hobbyist right now but I definitely know my way around writing front-end and back-end code for any web project you may think of!
-              When I'm not programming I enjoy playing ice hockey, lifting weights, making Hands Up EDM in FL Studio, cooking, and spending time with my loved ones.
-            </p>
+            <div>
+              
+              <p
+                className="text app__about-me-text"
+                data-swiper-parallax="-100"
+              >
+                My name is Zachary Wedel and I am a 23 year old full stack
+                developer who completed the Software Engieering program at
+                TripleTen and currently a student at the College of Lake County.
+                I've been invested in technology for a long time but made the
+                switch to programming full time from learning cybersecurity. I
+                am currently pursuing my Bachelor's Degree in Computer Science
+                and have been happier than ever with my career choice. Writing,
+                building and being proud of the software I make has been a much
+                more fulfilling experience than showing up at my college
+                everyday and not feeling invested. I'm mostly a hobbyist right
+                now but I definitely know my way around writing front-end and
+                back-end code for any web project you may think of! When I'm not
+                programming I enjoy playing ice hockey, lifting weights, making
+                Hands Up EDM in FL Studio, cooking, and spending time with my
+                loved ones.
+              </p>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
             {/*Featured works*/}

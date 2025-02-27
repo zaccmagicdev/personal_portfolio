@@ -221,6 +221,11 @@ body {
   animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
 }
 
+.app__about-me-text{
+  max-width: 50%;
+  text-align: center;
+}
+
 .app__widgetsContainer{
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
