@@ -31,6 +31,9 @@ function App() {
   fadeInTiming(4, firstOccRef);
   fadeInTiming(6, secondOccRef);
 
+  //disabling tab scrolling otherwise it will look wonky
+  document.querySelectorAll("*").forEach(element => element.setAttribute("tabindex", -1))
+
   return (
     <>
       <div className="stars stars2" />
@@ -38,7 +41,7 @@ function App() {
       <div className="stars stars4" />
 
       <div className="App">
-      <button className="app__github-asteroid"  type="button" onclick="location.href='https://github.com/zaccmagicdev/personal_portfolio';"/>
+      <button className="app__github-asteroid" type="button" onclick="window.location.href='https://github.com/zaccmagicdev/personal_portfolio';"/>
           
         <Swiper
           style={{

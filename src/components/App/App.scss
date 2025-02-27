@@ -164,14 +164,15 @@ body {
 .app__github-asteroid{
   background: transparent url('../../vendor/icons/github-brands-solid.svg') center no-repeat;
   background-color: #6e5494;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   position: absolute;
   left: 200px;
   top: 40px;
-  animation: floatAround linear infinite 15s;
-  border-radius: 20px;
+  animation: floatAround linear infinite 27s;
+  border-radius: 80px;
   cursor: pointer;
+  border: none;
 }
 
 .app__section {
