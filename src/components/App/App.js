@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./App.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -32,7 +33,9 @@ function App() {
   fadeInTiming(6, secondOccRef);
 
   //disabling tab scrolling otherwise it will look wonky
-  document.querySelectorAll("*").forEach(element => element.setAttribute("tabindex", -1))
+  document
+    .querySelectorAll("*")
+    .forEach((element) => element.setAttribute("tabindex", -1));
 
   return (
     <>
@@ -41,8 +44,15 @@ function App() {
       <div className="stars stars4" />
 
       <div className="App">
-      <button className="app__github-asteroid" type="button" onclick="window.location.href='https://github.com/zaccmagicdev/personal_portfolio';"/>
-          
+        <>
+          <a href="https://github.com/zaccmagicdev/personal_portfolio" target="_blank" rel="noopener noreferrer">
+            <button
+              className="app__github-asteroid"
+              type="button"
+            ></button>
+          </a>
+        </>
+
         <Swiper
           style={{
             "--swiper-navigation-color": "#FF69B4",
@@ -124,13 +134,14 @@ function App() {
               <section className="app__widgetsContainer">
                 {widgetData.map((object) => {
                   return (
-                  <FeaturedWidget
-                    id={object.id}
-                    name={object.name}
-                    githubLink={object.githublink}
-                    gifURL={object.gifURL}
-                    description={object.description}
-                  />)
+                    <FeaturedWidget
+                      id={object.id}
+                      name={object.name}
+                      githubLink={object.githublink}
+                      gifURL={object.gifURL}
+                      description={object.description}
+                    />
+                  );
                 })}
               </section>
             </div>
