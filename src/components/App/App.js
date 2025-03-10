@@ -143,7 +143,7 @@ function App() {
                 back-end code for any web project you may think of! When I'm not
                 programming I enjoy playing ice hockey, lifting weights, making
                 Hands Up EDM in FL Studio, cooking, and spending time with my
-                loved ones.
+                loved ones. You can find all of my work on the next slide!
               </p>
             </div>
           </SwiperSlide>
