@@ -8,6 +8,7 @@ import { useRef } from "react";
 
 import FeaturedWidget from "../FeaturedWidget/FeaturedWidget";
 import { widgetData } from "../../constants/WidgetsData";
+import SlideShow from "../SlideShow/SlideShow";
 
 function App() {
   //this is all here because I couldn't make a smooth animation with just CSS :>
@@ -123,8 +124,9 @@ function App() {
             <p className="app__medium-text" data-swiper-parallax="-200">
               and what can I do?
             </p>
-            <div>
-              
+            <div className="app_about-me-container">
+
+              <SlideShow />
               <p
                 className="text app__about-me-text"
                 data-swiper-parallax="-100"
