@@ -25,7 +25,6 @@ function FeaturedWidget(props) {
     
     widgetContainers.forEach(x => x.addEventListener('mousemove', handleWindowMouseMove))
 
-    console.log(coords.x)
   });
 
   return (
