@@ -7,7 +7,7 @@ function FeaturedWidget(props) {
   React.useEffect(() => {
 
     const widgetContainers = document.querySelectorAll(".featuredWidget")
-
+    
     const handleWindowMouseMove = (event) => {
       setCoords({
         x: event.clientX,
@@ -31,6 +31,7 @@ function FeaturedWidget(props) {
     <div
       className={`featuredWidget featuredWidget__${props.name}`}
       id={props.Id}
+      
     >
       <img className="featuredWidget__preview" src={props.gifURL} />
       <h2 className="featuredWidget__title">{props.name}</h2>

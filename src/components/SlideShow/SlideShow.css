@@ -1,14 +1,32 @@
 .slideshow{
-    max-width: 300px;
+    max-width: 400px;
     display: flex;
+    box-sizing: border-box;
 }
 
 .slideshow__image{
-    width: 100%;
+    max-width: 300px;
     height: 100%;
+    animation: slide 1s linear ease-in-out;
 }
 
 .slideshow__button{
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    border: none;
+}
+
+.slideshow__button_previous{
+    background: transparent url('../../vendor/icons/caret-left-solid.svg') center no-repeat;
+}
+
+.slideshow__button_next{
+    background: transparent url('../../vendor/icons/caret-right-solid.svg') center no-repeat;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0px);
+    } to {
+        transform: translateX(-300px);
+    }
 }
