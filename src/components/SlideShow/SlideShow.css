@@ -23,10 +23,3 @@
     background: transparent url('../../vendor/icons/caret-right-solid.svg') center no-repeat;
 }
 
-@keyframes slide{
-    from{
-        transform: translateX(0px);
-    } to {
-        transform: translateX(-300px);
-    }
-}
