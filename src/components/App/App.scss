@@ -222,6 +222,12 @@ body {
   animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
 }
 
+.app_about-me-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .app__about-me-text{
   max-width: 50%;
   text-align: center;
@@ -232,6 +238,7 @@ body {
   grid-template-columns: repeat(auto-fit, 280px);
   max-width: 968px;
   gap: 15px;
+  margin: auto;
   //overflow-y: scroll;
 }
 

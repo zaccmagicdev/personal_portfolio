@@ -15,9 +15,9 @@ function SlideShow() {
 
   return (
   <div className="slideshow">
+    <button type="slideshow__button slideshow__button_previous" onClick={() => previousImg()} />
     <img className="slideshow__image" src={authorImages[index].link}  />
-    <button type="slideshow__button" onClick={() => {previousImg(); console.log(index)}} />
-    <button type="slideshow__button" onClick={() => nextImg()} />
+    <button type="slideshow__button slideshow__button_next" onClick={() => nextImg()} />
   </div>);
 }
 
