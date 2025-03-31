@@ -1,7 +1,10 @@
 .slideshow{
-    max-width: 400px;
+    min-width: 400px;
     display: flex;
     box-sizing: border-box;
+    -webkit-animation: floatAround linear infinite 35s,
+    1s ease 6s normal forwards 1 fade;
+  animation: floatAround linear infinite 35s, 1s ease 6s normal forwards 1 fade;
 }
 
 .slideshow__image{
@@ -23,3 +26,26 @@
     background: transparent url('../../vendor/icons/caret-right-solid.svg') center no-repeat;
 }
 
+@keyframes floatAround {
+    0% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+    25% {
+      -webkit-transform: translateX(15px) translateY(15px);
+      transform: translateX(15px) translateY(15px);
+    }
+    50% {
+      -webkit-transform: translateX(-15px) translateY(-15px);
+      transform: translateX(-15px) translateY(-15px);
+    }
+    75% {
+      -webkit-transform: translateX(15px) translateY(-15px);
+      transform: translateX(15px) translateY(-15px);
+    }
+    100% {
+      -webkit-transform: translateX(0px) translateY(0px);
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+  

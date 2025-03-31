@@ -6,8 +6,6 @@ $largeFont: 8em;
   src: url("../../../public/fonts/AfacadFlux-Regular.woff") format(woff);
 }
 
-
-
 @function renderStars($amount, $color) {
   $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
   @for $i from 2 through $amount {
@@ -196,6 +194,9 @@ body {
 
 .app__medium-text{
   font-size: $largeFont / 3;
+  -webkit-animation: floatAround linear infinite 15s,
+  1s ease 6s normal forwards 1 fade;
+animation: floatAround linear infinite 15s, 1s ease 6s normal forwards 1 fade;
 }
 
 .top {
@@ -226,11 +227,15 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-top: 50px;
 }
 
 .app__about-me-text{
   max-width: 50%;
   text-align: center;
+  -webkit-animation: floatAround linear infinite 20s,
+  1s ease 6s normal forwards 1 fade;
+animation: floatAround linear infinite 20s, 1s ease 6s normal forwards 1 fade;
 }
 
 .app__widgetsContainer{
