@@ -1,11 +1,15 @@
 .slideshow{
-    max-width: 300px;
+    overflow: visible;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid red;
     display: flex;
+    justify-content: space-between;
 }
 
 .slideshow__image{
-    width: 100%;
-    height: 100%;
+    max-width: 300px;
+    height: 300px;
 }
 
 .slideshow__button{

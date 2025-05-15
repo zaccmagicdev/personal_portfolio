@@ -2,10 +2,9 @@ $screenWidth: 5120;
 $largeFont: 8em;
 
 @font-face {
-  font-family: "Afacad Flux";
-  src: url("../../../public/fonts/AfacadFlux-Regular.woff") format(woff);
+  font-family: "Pixelated Times New Roman";
+  src: url("../../../public/fonts/pixelated-times-new-roman.otf.woff2") format(woff2);
 }
-
 
 
 @function renderStars($amount, $color) {
@@ -21,6 +20,16 @@ $shadows-tiny: renderStars(100, "#00FFCC");
 $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
+
+p{
+  font-size: 22px;
+}
+
+h1{
+  background-image: linear-gradient(0deg,rgba(195, 141, 34, 1) 0%, rgba(170, 45, 253, 1) 100%);
+  background-clip: text;
+  color: transparent;
+}
 
 p, h1, div, h2{
   text-align: center;
@@ -44,7 +53,7 @@ body {
   background: -o-radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background: radial-gradient(circle, rgb(3, 0, 17) 0%, rgb(7, 0, 12) 100%);
   background-attachment: fixed;
-  font-family: "Afacad Flux", Arial, Helvetica;
+  font-family: "Pixelated Times New Roman", Arial, Helvetica;
   color: white;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -224,7 +233,7 @@ body {
 
 .app__about-me-text{
   max-width: 50%;
-  text-align: center;
+  margin-left: 25%;
 }
 
 .app__widgetsContainer{
@@ -248,12 +257,12 @@ body {
 
 @keyframes starMove {
   from {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  to {
     -webkit-transform: translateY(-2000px);
     transform: translateY(-2000px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
