@@ -3,7 +3,6 @@
     overflow: visible;
     max-width: 200px;
     max-height: 200px;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     min-width: 400px;
