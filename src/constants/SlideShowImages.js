@@ -19,4 +19,9 @@ export const authorImages = [
         index: 3,
         link: "https://i.gifer.com/APWb.gif"
     },
+    {
+        id: 4,
+        index: 4,
+        link: "https://i.pinimg.com/originals/5a/93/4e/5a934e84f67d2a61a118ec95b1d6cb74.gif"
+    },
 ];

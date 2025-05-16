@@ -126,7 +126,7 @@ function App() {
             </p>
             <div className="app_about-me-container">
 
-              <SlideShow />
+              <SlideShow className="app__author-images"/>
               <p
                 className="text app__about-me-text"
                 data-swiper-parallax="-100"

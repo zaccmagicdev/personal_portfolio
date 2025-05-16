@@ -6,7 +6,6 @@ $largeFont: 8em;
   src: url("../../../public/fonts/pixelated-times-new-roman.otf.woff2") format(woff2);
 }
 
-
 @function renderStars($amount, $color) {
   $returnVal: "#{random($screenWidth)}px #{random($screenWidth)}px #{$color}";
   @for $i from 2 through $amount {
@@ -205,6 +204,9 @@ body {
 
 .app__medium-text{
   font-size: $largeFont / 3;
+  -webkit-animation: floatAround linear infinite 15s,
+  1s ease 6s normal forwards 1 fade;
+animation: floatAround linear infinite 15s, 1s ease 6s normal forwards 1 fade;
 }
 
 .top {
@@ -231,9 +233,19 @@ body {
   animation: floatAround linear infinite 25s, 1s ease 6s normal forwards 1 fade;
 }
 
+.app_about-me-container{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
 .app__about-me-text{
   max-width: 50%;
-  margin-left: 25%;
+  text-align: center;
+  -webkit-animation: floatAround linear infinite 20s,
+  1s ease 6s normal forwards 1 fade;
+animation: floatAround linear infinite 20s, 1s ease 6s normal forwards 1 fade;
 }
 
 .app__widgetsContainer{
@@ -241,6 +253,7 @@ body {
   grid-template-columns: repeat(auto-fit, 280px);
   max-width: 968px;
   gap: 15px;
+  margin: auto;
   //overflow-y: scroll;
 }
 
