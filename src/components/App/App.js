@@ -34,7 +34,7 @@ function App() {
 
   //disabling tab scrolling otherwise it will look wonky
   document
-    .querySelectorAll("*")
+    .querySelectorAll("*, .slideshow__button")
     .forEach((element) => element.setAttribute("tabindex", -1));
 
   return (
