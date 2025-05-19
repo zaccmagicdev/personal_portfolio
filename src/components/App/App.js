@@ -58,7 +58,7 @@ function App() {
           style={{
             "--swiper-navigation-color": "#FF69B4",
             "--swiper-pagination-color": "#FF69B4",
-            "--swiper-pagination-bullet-inactive-color": "#5DF15D",
+            "--swiper-pagination-bullet-inactive-color": "#00FFFC",
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "12px",
           }}
