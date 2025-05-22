@@ -193,6 +193,12 @@ body {
   cursor: pointer;
   border: none;
   z-index: 2;
+  transition: all ease-in-out 0.4ms;
+}
+
+.app__github-asteroid:hover{
+    background: transparent url("../../vendor/icons/bg_test__active.png")
+    center no-repeat;
 }
 
 .app__section {
