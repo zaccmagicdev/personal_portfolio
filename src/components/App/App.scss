@@ -15,7 +15,7 @@ $largeFont: 8em;
 
   @return unquote($returnVal);
 }
-
+//i think i found the issue, 
 $shadows-tiny: renderStars(100, "#00FFCC");
 $shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(400, "#A64DFF");
@@ -103,8 +103,8 @@ body {
   height: 1px;
   -webkit-box-shadow: $shadows-small;
   box-shadow: $shadows-small;
-  -webkit-animation: starMove 10s linear infinite;
-  animation: starMove 10s linear infinite;
+  -webkit-animation: starMove 150s linear infinite;
+  animation: starMove 150s linear infinite;
   position: absolute;
 
   &:after {
@@ -123,14 +123,14 @@ body {
   height: 2px;
   -webkit-box-shadow: $shadows-medium;
   box-shadow: $shadows-medium;
-  -webkit-animation: starMove 15s linear infinite;
-  animation: starMove 15s linear infinite;
+  -webkit-animation: starMove 100s linear infinite;
+  animation: starMove 100s linear infinite;
   position: absolute;
 
   &:after {
     content: " ";
     position: absolute;
-    top: $screenWidth;
+    top: 5120px;
     width: 2px;
     height: 2px;
 
@@ -165,8 +165,8 @@ body {
   height: 1px;
   -webkit-box-shadow: $shadows-tiny;
   box-shadow: $shadows-tiny;
-  -webkit-animation: starMove 5s linear infinite;
-  animation: starMove 5s linear infinite;
+  -webkit-animation: starMove 50s linear infinite;
+  animation: starMove 50s linear infinite;
   position: absolute;
 
   &:after {

@@ -5,7 +5,6 @@ import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useRef } from "react";
-
 import FeaturedWidget from "../FeaturedWidget/FeaturedWidget";
 import { widgetData } from "../../constants/WidgetsData";
 import SlideShow from "../SlideShow/SlideShow";
@@ -40,9 +39,8 @@ function App() {
   return (
     <>
       <div className="stars stars2" />
-      <div className="stars stars3" />
+      <div className="stars stars3" />*
       <div className="stars stars4" />
-
       <div className="App">
         <div>
           <a
@@ -125,8 +123,7 @@ function App() {
               and what can I do?
             </p>
             <div className="app_about-me-container">
-
-              <SlideShow className="app__author-images"/>
+              <SlideShow className="app__author-images" />
               <p
                 className="text app__about-me-text"
                 data-swiper-parallax="-100"
