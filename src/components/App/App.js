@@ -48,7 +48,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="app__github-asteroid" type="button"></button>
+            <button className="app__github-asteroid" type="button" />
           </a>
         </div>
 
@@ -113,12 +113,12 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             {/*About me section*/}
-            <p
+            <h1
               className="app__main-text app__main-text_shown"
               data-swiper-parallax="-300"
             >
               Who am I?
-            </p>
+            </h1>
             <p className="app__medium-text" data-swiper-parallax="-200">
               and what can I do?
             </p>
@@ -148,11 +148,11 @@ function App() {
           </SwiperSlide>
           <SwiperSlide>
             {/*Featured works*/}
-            <div className="title app__medium-text" data-swiper-parallax="-300">
+            <h1 className="app__main-text app__main-text_shown" data-swiper-parallax="-300">
               What kinds of things have I made?
-            </div>
+            </h1>
             <div className="text" data-swiper-parallax="-100">
-              <section className="app__widgetsContainer">
+              <ul className="app__widgetsContainer">
                 {widgetData.map((object) => {
                   return (
                     <FeaturedWidget
@@ -164,7 +164,7 @@ function App() {
                     />
                   );
                 })}
-              </section>
+              </ul>
             </div>
           </SwiperSlide>
           {/*More coming soon!*/}

@@ -5,13 +5,15 @@
   display: block;
   margin: 0px;
   padding: 0px;
- 
+
   background: rgba(0, 255, 252, 0.14);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.1px);
   -webkit-backdrop-filter: blur(2.1px);
   border: 1px solid rgba(0, 255, 252, 1);
+
+  transition: all ease-in-out 100ms;
 }
 
 .featuredWidget__preview {
@@ -23,11 +25,11 @@
   box-sizing: border-box;
 }
 
-.featuredWidget__title{
+.featuredWidget__title {
   box-sizing: border-box;
 }
 
-.featuredWidget__githublink{
+.featuredWidget__githublink {
   display: block;
   width: inherit;
   white-space: nowrap;
@@ -37,9 +39,7 @@
   color: aqua;
 }
 
-.hover_effect{
-  width: 15px;
-  height: 15px;
-  border-radius: 10px;
-  color: aqua;
+.featuredWidget:hover {
+  transform: scale(1.1);
+  z-index: 1;
 }

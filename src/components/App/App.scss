@@ -181,10 +181,10 @@ body {
 }
 
 .app__github-asteroid {
-  background: transparent url("../../vendor/icons/gradient__pixel.png")
+  background: transparent url("../../vendor/icons/bg_test.png")
     center no-repeat;
-  width: 200px;
-  height: 200px;
+  width: 96px;
+  height: 96px;
   position: absolute;
   left: 200px;
   top: 40px;
@@ -211,6 +211,9 @@ body {
 
 .app__main-text_shown {
   visibility: visible;
+   -webkit-animation: floatAround linear infinite 50s,
+    1s ease 6s normal forwards 1 fade;
+  animation: floatAround linear infinite 50s, 1s ease 6s normal forwards 1 fade;
 }
 
 .app__medium-text {
@@ -269,6 +272,13 @@ body {
   max-width: 968px;
   gap: 15px;
   margin: auto;
+
+}
+
+//will blur other cards not in focus
+.app__widgetsContainer:has(li:hover)
+li:not(:hover){
+  filter: blur(3px);
 }
 
 @-webkit-keyframes starMove {
