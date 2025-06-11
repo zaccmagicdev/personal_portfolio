@@ -20,7 +20,6 @@ function App() {
     const miliseconds = delay * 1000;
     setTimeout(() => {
       //prevents crash
-      console.log(element.current.classList);
       element !== null && element.current.classList.add("app__main-text_shown");
     }, miliseconds);
   }
@@ -33,7 +32,7 @@ function App() {
 
   //disabling tab scrolling otherwise it will look wonky
   document
-    .querySelectorAll("*, .slideshow__button")
+    .querySelectorAll("*, .slideshow__button, a")
     .forEach((element) => element.setAttribute("tabindex", -1));
 
   return (
@@ -42,15 +41,6 @@ function App() {
       <div className="stars stars3" />*
       <div className="stars stars4" />
       <div className="App">
-        <div>
-          <a
-            href="https://github.com/zaccmagicdev/personal_portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="app__github-asteroid" type="button" />
-          </a>
-        </div>
 
         <Swiper
           style={{
@@ -67,9 +57,7 @@ function App() {
             clickable: true,
           }}
           mousewheel={true}
-          keyboard={{
-            enabled: true,
-          }}
+         
           navigation={true}
           modules={[Parallax, Pagination, Mousewheel, Keyboard]}
           className="appParallaxSlider"
@@ -82,6 +70,15 @@ function App() {
           ></div>
           <SwiperSlide>
             {/*Title Page*/}
+              <>
+          <a
+            href="https://github.com/zaccmagicdev/personal_portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="app__github-asteroid" type="button" />
+          </a>
+        </>
             <h1
               className="title app__main-text top"
               ref={topRef}
@@ -128,7 +125,7 @@ function App() {
                 className="text app__about-me-text"
                 data-swiper-parallax="-100"
               >
-                My name is Zachary Wedel and I am a 23 year old full stack
+                My name is Zachary Wedel and I am a 24 year old Full-Stack Web
                 developer who completed the Software Engieering program at
                 TripleTen and currently a student at the College of Lake County.
                 I've been invested in technology for a long time but made the

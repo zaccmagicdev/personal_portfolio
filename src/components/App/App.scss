@@ -15,14 +15,13 @@ $largeFont: 8em;
 
   @return unquote($returnVal);
 }
-//i think i found the issue, 
+//i think i found the issue,
 $shadows-tiny: renderStars(100, "#00FFCC");
-$shadows-small: renderStars(700, "#FF4DFF");
 $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
 
 p {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 h1,
@@ -98,26 +97,6 @@ body {
   position: absolute;
 }
 
-.stars1 {
-  width: 1px;
-  height: 1px;
-  -webkit-box-shadow: $shadows-small;
-  box-shadow: $shadows-small;
-  -webkit-animation: starMove 150s linear infinite;
-  animation: starMove 150s linear infinite;
-  position: absolute;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 5120px;
-    width: 1px;
-    height: 1px;
-    -webkit-box-shadow: $shadows-small;
-    box-shadow: $shadows-small;
-  }
-}
-
 .stars2 {
   width: 2px;
   height: 2px;
@@ -181,8 +160,7 @@ body {
 }
 
 .app__github-asteroid {
-  background: transparent url("../../vendor/icons/bg_test.png")
-    center no-repeat;
+  background: transparent url("../../vendor/icons/bg_test.png") center no-repeat;
   width: 96px;
   height: 96px;
   position: absolute;
@@ -196,9 +174,9 @@ body {
   transition: all ease-in-out 0.4ms;
 }
 
-.app__github-asteroid:hover{
-    background: transparent url("../../vendor/icons/bg_test__active.png")
-    center no-repeat;
+.app__github-asteroid:hover {
+  background: transparent url("../../vendor/icons/bg_test__active.png") center
+    no-repeat;
 }
 
 .app__section {
@@ -217,7 +195,7 @@ body {
 
 .app__main-text_shown {
   visibility: visible;
-   -webkit-animation: floatAround linear infinite 50s,
+  -webkit-animation: floatAround linear infinite 50s,
     1s ease 6s normal forwards 1 fade;
   animation: floatAround linear infinite 50s, 1s ease 6s normal forwards 1 fade;
 }
@@ -229,7 +207,7 @@ body {
   animation: floatAround linear infinite 15s, 1s ease 6s normal forwards 1 fade;
 }
 
-.title{
+.title {
   margin-bottom: 0px;
 }
 
@@ -278,12 +256,10 @@ body {
   max-width: 968px;
   gap: 15px;
   margin: auto;
-
 }
 
 //will blur other cards not in focus
-.app__widgetsContainer:has(li:hover)
-li:not(:hover){
+.app__widgetsContainer:has(li:hover) li:not(:hover) {
   filter: blur(3px);
 }
 
@@ -376,5 +352,11 @@ li:not(:hover){
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__main-text {
+    font-size: 7em;
   }
 }
