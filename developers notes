@@ -1,8 +1,23 @@
 || Developers notes ||
 
 6/11/25:
-
 - formatted some wording    
 - looking into responsiveness
 - adding a gravity deature?
 - adding a feature where it's easy to add a project card with a token perhaps
+
+
+6/13/25:
+- adding some pixelated icons and what not
+
+
+6/16/25:
+- get my own images (zach) in the slideshow and make that UI look more like the rest of the site
+- look into how to make this responsive
+
+
+IT WOULD BE REALLY COOL IF I COULD RELEASE THIS ON ONE OF MY DAYS OFF
+
+6/24/25:
+- learned that !important css tag works as an override
+-what I'm going to have to do is go through all the elements in the slides to see what's not making things shrink past ~870px

@@ -15,7 +15,7 @@ $largeFont: 8em;
 
   @return unquote($returnVal);
 }
-//i think i found the issue,
+
 $shadows-tiny: renderStars(100, "#00FFCC");
 $shadows-medium: renderStars(400, "#A64DFF");
 $shadows-big: renderStars(200, "#3A68E8");
@@ -47,6 +47,8 @@ h2 {
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
+  border: 1px solid red;
 }
 
 button:hover {

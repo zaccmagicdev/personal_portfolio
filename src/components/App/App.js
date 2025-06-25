@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./App.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -31,14 +31,13 @@ function App() {
   fadeInTiming(6, secondOccRef);
 
   //disabling tab scrolling otherwise it will look wonky
-  document
-    .querySelectorAll("*, .slideshow__button, a")
-    .forEach((element) => element.setAttribute("tabindex", -1));
+  const allElements = document.querySelectorAll("*");
+  allElements.forEach((element) => element.setAttribute("tabindex", -1));
 
   return (
     <>
       <div className="stars stars2" />
-      <div className="stars stars3" />*
+      <div className="stars stars3" />
       <div className="stars stars4" />
       <div className="App">
 
@@ -61,7 +60,7 @@ function App() {
           navigation={true}
           modules={[Parallax, Pagination, Mousewheel, Keyboard]}
           className="appParallaxSlider"
-          slidesPerView={1}
+          slidesPerView={"auto"}
         >
           <div
             slot="container-start"
